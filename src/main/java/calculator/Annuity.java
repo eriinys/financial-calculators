@@ -15,7 +15,7 @@ public class Annuity {
         if (monthlyInterest == 0) {
             presentValue = monthlyPay * months;
         } else {
-            presentValue = monthlyPay * (1 - Math.pow())
+            presentValue = monthlyPay *
         }
 
         //output
