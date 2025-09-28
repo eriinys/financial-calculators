@@ -5,7 +5,7 @@ public class MortgageCalculator {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner (System.in);
         double principal = readDouble(myScanner,"Please enter the principal amount:");
-        double annualRate = readDouble(myScanner,"Please enter the annual interest rate:");
+        double annualRate = readDouble(myScanner,"Please enter the annual interest rate (only number):");
         int loanTermYears = readInt(myScanner,"Please enter the loan term in years:");
 
         //n = number of monthly payments
@@ -26,8 +26,8 @@ public class MortgageCalculator {
         double totalInterest = (monthlyPayment * n) - principal;
 
         //output
-        System.out.printf("Expected monthly payment is: $%.2f%n", monthlyPayment);
-        System.out.printf("Total interest paid is: $%.2f%n", totalInterest);
+        System.out.printf("Expected monthly payment (minus insurance and tax) is: $%.2f%n", monthlyPayment);
+        System.out.printf("Total interest you would pay off within %d years: $%.2f%n", loanTermYears, totalInterest);
     }
 
     //parameter
@@ -40,8 +40,7 @@ public class MortgageCalculator {
     public static int readInt(Scanner in, String prompt) {
         System.out.println(prompt);
         int number = in.nextInt();
-        in.nextLine();
-        return in.nextInt();
+        return number;
     }
 }
 
