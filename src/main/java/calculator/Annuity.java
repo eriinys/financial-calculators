@@ -9,17 +9,16 @@ public class Annuity {
         double annualInterest = readDouble(myScanner, "Enter the expected interest rate:");
 
         int months = years * 12;
-        double desiredPayTotal = monthlyPay * 12;
         double monthlyInterest = (annualInterest / 100) / 12;
         double presentValue;
         if (monthlyInterest == 0) {
             presentValue = monthlyPay * months;
         } else {
-            presentValue = monthlyPay *
+            presentValue = monthlyPay * (1 - Math.pow(1 + monthlyInterest, -months)) / monthlyInterest;
         }
 
         //output
-        System.out.printf("To fund an annuity that pays $%d monthly for %d years and earns an expected %.2f%% interest, you would need to invest $%.2f today.", monthlyPay, years, interestRate, presentValue);
+        System.out.printf("To fund an annuity that pays $%d monthly for %d years and earns an expected %.2f%% interest, you would need to invest $%.2f today.", monthlyPay, years, annualInterest, presentValue);
 
     }
 
