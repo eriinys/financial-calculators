@@ -7,13 +7,16 @@ public class Main {
         Scanner input = new Scanner(System.in);
         System.out.println("Which calculator would you like to use?:\n" +
                 "1 = Mortgage Calculator\n" +
-                "2 = CD Calculator");
+                "2 = CD Calculator\n" +
+                "3 = Annuity Calculator\n");
         int choice = input.nextInt();
 
         if (choice == 1) {
             MortgageCalculator.run(input);
         } else if (choice == 2) {
             CdCalculator.run(input);
+        } else if (choice == 3) {
+            Annuity.run(input);
         }
 
         input.close();
