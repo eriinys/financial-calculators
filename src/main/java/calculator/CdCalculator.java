@@ -17,7 +17,7 @@ public class CdCalculator {
         double  totalInterest = FV - principal;
 
         System.out.printf("You deposited $%d in a CD that earns %.2f%% interest and matures in %d years.%n" +
-                "Your CD's ending balance will be $%.2f and you would have earned $%.2f in interest.", principal, interestRate, years,FV, totalInterest);
+                "Your CD's ending balance will be $%.2f and you would have earned $%.2f in interest.", principal, interestRate, years, FV, totalInterest);
 
     }
 
