@@ -21,10 +21,11 @@ public class CdCalculator {
         if (i == 0.00) {
             monthlyPayment = principal / n;
         } else {
+            double pow = Math.pow(1 + i, n);
+            monthlyPayment = principal * (i * pow) / (pow - 1);
         }
-        principal * (i * (1 + i)^n / ((1 + annualRate)^n) - 1) );
-
-        double totalInterest =
+        
+        double totalInterest = (monthlyPayment * n) - principal;
 
 
 
