@@ -18,7 +18,7 @@ public class Annuity {
         }
 
         //output
-        System.out.printf("To fund an annuity that pays $%d monthly for %d years and earns an expected %.2f%% interest, you would need to invest $%.2f today.", monthlyPay, years, annualInterest, presentValue);
+        System.out.printf("To fund an annuity that pays $%d monthly for %d years and earns an annual interest of %.2f%%, you would need to invest $%.2f today.", monthlyPay, years, annualInterest, presentValue);
 
     }
 
