@@ -1,7 +1,7 @@
 package calculator;
-import java.util.*;
+import  java.util.*;
 
-public class CdCalculator {
+public class Annuity {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner(System.in);
     }
