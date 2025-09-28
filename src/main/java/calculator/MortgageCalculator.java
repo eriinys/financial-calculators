@@ -2,8 +2,8 @@ package calculator;
 import java.util.*;
 
 public class MortgageCalculator {
-    public static void main(String[] args) {
-        Scanner myScanner = new Scanner (System.in);
+    public static void run(Scanner myScanner) {
+
         double principal = readDouble(myScanner,"Please enter the principal amount:");
         double annualRate = readDouble(myScanner,"Please enter the annual interest rate (only number):");
         int loanTermYears = readInt(myScanner,"Please enter the loan term in years:");
