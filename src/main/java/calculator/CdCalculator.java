@@ -5,9 +5,9 @@ public class CdCalculator {
     public static void main(String[] args) {
         Scanner myScanner = new Scanner (System.in);
 
-        double principal = readDouble("Please enter the principal amount:");
-        double annualRate = readDouble("Please enter the annual interest rate:");
-        int loanTermYears = readInt("Please enter the loan term in years:");
+        double principal = readDouble(myScanner,"Please enter the principal amount:");
+        double annualRate = readDouble(myScanner,"Please enter the annual interest rate:");
+        int loanTermYears = readInt(myScanner,"Please enter the loan term in years:");
 
 
         //n = number of monthly payments
@@ -24,11 +24,25 @@ public class CdCalculator {
             double pow = Math.pow(1 + i, n);
             monthlyPayment = principal * (i * pow) / (pow - 1);
         }
-        
+
         double totalInterest = (monthlyPayment * n) - principal;
 
+        //output
+        System.out.printf("Expected monthly payment is: $%.2f%n", monthlyPayment);
+        System.out.printf("Total interest paid is: $%.2f%n", totalInterest);
+    }
 
+    //parameter
 
+    public static double readDouble(Scanner in, String prompt) {
+        System.out.println(prompt);
+        return  in.nextDouble();
+    }
 
+    public static int readInt(Scanner in, String prompt) {
+        System.out.println(prompt);
+        int number = in.nextInt();
+        in.nextLine();
+        return in.nextInt();
     }
 }
