@@ -11,12 +11,12 @@ public class CdCalculator {
         double r = interestRate / 100.00;
         double numDays = 365 * years;
 
-        double pow = Math.pow((1 + (r / 365)), (365 * years));
+        double pow = Math.pow((1 + (r / 365)), numDays);
 
         double FV = principal * pow;
         double  totalInterest = FV - principal;
 
-        System.out.printf("You deposited %.2f in a CD that earns %.2f% interest and matures in %d years.%n" +
+        System.out.printf("You deposited $%d in a CD that earns %.2f%% interest and matures in %d years.%n" +
                 "Your CD's ending balance will be $%.2f and you would have earned $%.2f in interest.", principal, interestRate, years,FV, totalInterest);
 
     }
