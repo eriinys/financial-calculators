@@ -8,7 +8,7 @@ public class Annuity {
         int years = readInt(myScanner, "Enter the desired years of payout: ");
         double interestRate = readDouble(myScanner, "Enter the expected interest rate:");
 
-        double desiredPayTotal = monthlyPay * years;
+        double desiredPayTotal = monthlyPay * 12;
         double compoundDouble = 72 / interestRate;
         double presentValue = desiredPayTotal / compoundDouble;
 
